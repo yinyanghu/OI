@@ -1,0 +1,76 @@
+program p2387;
+const maxn=1050;
+      infinity=1000000000;
+type node=record
+         dist,num:longint;
+     end;
+var f:array[1..maxn] of longint;
+    heap:array[1..maxn] of node;
+    w:array[1..maxn,1..maxn] of longint;
+    s:array[1..maxn] of boolean;
+    i,j,k,m,n,total,x,y:longint;
+
+procedure insert(var p:longint; s,v:longint);
+ var t:longint;
+     k:node;
+ begin
+     inc(p);
+     t:=p;
+     heap[t].dist:=s; heap[t].num:=v;
+     while (t<>1) and (heap[t div 2].dist>heap[t].dist) do begin
+         k:=heap[t div 2]; heap[t div 2]:=heap[t]; heap[t]:=k;
+         t:=t div 2;
+     end;
+ end;
+
+function getmin(var p:longint):longint;
+ var t,s:longint;
+     k:node;
+ begin
+     getmin:=heap[1].num;
+     k:=heap[1]; heap[1]:=heap[p]; heap[p]:=k;
+     dec(p);
+     t:=1;
+     while t*2<=p do begin
+         if (t*2+1>p) or (heap[2*t+1].dist>heap[2*t].dist) then s:=2*t
+           else s:=2*t+1;
+         if heap[t].dist>heap[s].dist then begin
+            k:=heap[t]; heap[t]:=heap[s]; heap[s]:=k;
+            t:=s;
+         end else break;
+     end;
+ end;
+
+
+begin
+    readln(m,n);
+    for i:=1 to n do
+      for j:=1 to n do w[i,j]:=-1;
+    for i:=1 to m do begin
+        readln(x,y,k);
+        if w[x,y]=-1 then begin
+	    w[x,y]:=k; w[y,x]:=k;
+	end else if k<w[x,y] then begin
+	    w[x,y]:=k; w[y,x]:=k;
+	end;
+    end;
+    total:=0;
+    fillchar(s,sizeof(s),true);
+    for i:=2 to n do f[i]:=infinity;
+    f[1]:=0; insert(total,f[1],1);
+    for i:=1 to n-1 do begin
+        repeat
+	   k:=getmin(total);
+	until (s[k]=true) or (total=0);
+	if s[k] then begin
+           s[k]:=false;
+           for j:=1 to n do
+               if (s[j]) and (w[k,j]>0) and (f[k]+w[k,j]<f[j]) then begin
+                   f[j]:=f[k]+w[k,j];
+                   insert(total,f[j],j);
+               end;
+	end;
+	if total=0 then break;
+    end;
+    writeln(f[n]);
+end.
