@@ -1,0 +1,27 @@
+/* ================================================================
+离线LCA - Tarjan算法
+    -> Q(u)保存u的所有查询LCA(u,v)
+    -> init: color[ * ] = 0;
+    -> 调用Tarjan( root );
+
+void	tarjan( u )
+{
+	Make_set(u);	// parent[u] = u;
+	for (u 的每个儿子 v)
+	{
+		tarjan( v );
+	
+		Union( u , v );
+		Ancestor[ find_set( u ) ] = u;	
+		////// parent[ find_set( v ) ] = u;
+	}
+
+	color[u] = 1;
+	for ( Q(u) 中的所有元素 v )
+		if ( color[v] == 1 )
+		{
+			LCA(u,v) = Ancestor[ find_set(v) ];
+			// LCA(u,v) = find_set( v );
+		}	
+}
+*/

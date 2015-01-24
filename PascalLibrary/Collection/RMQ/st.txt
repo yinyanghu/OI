@@ -1,0 +1,5 @@
+RMQ-Sparse Table(ST)：动态规划
+F[i,j]=max{F[i,j-1],F[i+2^(j-1),j-1]}
+Online
+O(NLogN)-O(1)
+询问多时，竞赛首选

@@ -1,0 +1,33 @@
+Folder's relation:(Interval Tree)
+
+Pas:
+main program:
+tree.pas----->Sum,Add
+intervaltree.pas----->Sum,Modify
+tree2.pas----->Min,Max,Modify
+tree3.pas----->RMQ
+tree4.pas----->Improve RMQ
+tree5.pas----->Interval Tree(it)(Insert,Delete,Total)
+
+test program:
+test.pas----->tree2.pas,check.pas
+test2.pas----->tree4.pas,check2.pas
+test3.pas----->tree5.pas,check3.pas
+
+check program:
+check.pas----->tree2.pas
+check2.pas----->tree3.pas,tree4.pas
+check3.pas----->tree5.pas
+
+
+File:
+tree.in/out------>tree.pas
+intree.in/out,test.out----->tree2.pas,check.pas,test.pas
+intree1.in/out,test2.out,intree2.out----->tree3.pas,tree4.pas,check2.pas,test2.pas
+itree.in/out,test3.out------->tree5.pas,check3.pas,test3.pas
+
+Bat:
+run.bat---->test2.exe,tree3.exe,tree4.exe,check2.exe
+compile.bat---->all
+test.bat---->test.exe,tree2.exe,check.exe
+test2.bat---->test3.exe,tree5.exe,check3.exe

@@ -1,0 +1,11 @@
+Splay Tree Array Edition
+Function:
+(1)Insert
+(2)Delete
+(3)Find
+(4)Rank
+(5)Select
+(6)Minimum
+(7)Maximum
+(8)Succ
+(9)Pred

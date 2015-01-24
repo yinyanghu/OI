@@ -1,0 +1,12 @@
+Folder's relation:(Binary Search Tree)
+
+1、Splay Tree(OK)
+2、Size Balanced Tree(OK)
+3、AVL(OK)
+4、Red-Black Tree(Not)
+5、Binary Search Tree(OK)
+6、Randomized Binary Search Tree(OK)
+7、Perfect Binary Search Tree
+8、AATree(OK)
+9、Treap(OK)
+10、Skip List

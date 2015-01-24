@@ -1,0 +1,5 @@
+RMQ-CT-LCA-Tarjan
+Offline
+O(Na(N))
+ÕÛÖÔËã·¨
+RMQ-->LCA-CT-->LCA-Tarjan½â¾ö

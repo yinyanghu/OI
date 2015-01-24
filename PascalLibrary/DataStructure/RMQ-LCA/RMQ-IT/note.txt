@@ -1,0 +1,5 @@
+RMQ-IT：线段树直接处理
+Online
+O(N)-O(LogN)
+询问不多时，竞赛首选
+详细见Interval Tree

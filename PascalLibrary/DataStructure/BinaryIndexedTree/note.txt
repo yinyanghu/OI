@@ -1,0 +1,27 @@
+Folder's relation:(Binary Indexed Tree)
+
+Pas:
+main program:
+bitree.pas----->Modify,Sum(1D)
+bitree2.pas----->Modify,Sum(2D)
+bitree3.pas----->Modify,Sum(3D)(URAL1470 UFOs)
+
+test program:
+test.pas----->bitree.pas,check.pas
+test2.pas----->bitree2.pas,check2,pas
+ural1470.cpp----->bitree3.pas
+
+check program:
+check.pas----->bitree.pas
+check2.pas----->bitree2.pas
+
+File:
+bitree.in/out----->bitree.pas
+test.out----->check.pas,bitree.pas,test.pas
+bitree2.in/out----->bitree2.pas
+test2.out----->check2.pas,bitree2.pas,test2.pas
+
+Bat:
+compile.bat----->all
+test.bat----->test.exe,bitree.exe,check.exe
+test2.bat----->test2.exe,bitree2.exe,check2.exe

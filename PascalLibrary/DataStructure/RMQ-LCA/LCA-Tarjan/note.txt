@@ -1,0 +1,4 @@
+LCA-Tarjan
+Offline
+O(Na(N))
+较为实用！

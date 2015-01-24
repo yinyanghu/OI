@@ -1,0 +1,21 @@
+/*
+	By Tang
+
+	原图G = (V , E , C) , S->T
+	
+	判断G是否存在 flow = a 的可行流 (binarySearch here)
+	
+	添加 : T->S , B(T,S) = a , C(T,S) = infinity;
+	构造G' :		
+		C'(u , v) = C(u,v) - B(u,v)				
+		对结点i	, let M(i) = Sigma(流入下界) - Sigma(流出下界)
+			if M(i) > 0	C'(s0 , i) = + M(i)
+			   M(i) < 0	C'(i , t0) = - M(i)
+
+		求G'中 s0 -> t0的最大流g
+			如果存在可行流:
+				g(s0 , i) 满载
+				g(i , t0) 满载
+
+	practise:	sgu194 , sgu176
+*/
