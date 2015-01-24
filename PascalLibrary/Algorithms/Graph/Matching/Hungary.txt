@@ -1,0 +1,40 @@
+const	int	limitSize	= xx;
+
+int	n , m;
+bool	mat	[limitSize][limitSize];
+0..n-1 , 0..m-1±Ì æ
+
+int	cx	[limitSize];
+int	cy	[limitSize];
+bool	mark	[limitSize];
+
+bool	extendPath(int u)
+{
+	for (int v = 0; v < m; v ++)
+		if (mat[u][v] && ! mark[v])
+		{
+			mark[v] = True;
+			if (cy[v] < 0 || extendPath(cy[v]))
+				return cx[u] = v , cy[v] = u , True;}		
+		}
+	return False;
+}
+
+void	Hungary()
+{
+	memset(cx , 0xff , sizeof(cx));
+	memset(cy , 0xff , sizeof(cy));
+
+	int	cntMatch = 0;
+
+	for (int i = 0; i < n; i ++)
+		if (cx[i] < 0)
+		{
+			memset(mark , 0 , sizefo(mark));
+			if (extendPath(i))
+				cntMatch ++;
+		}
+}
+
+
+

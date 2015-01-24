@@ -1,0 +1,74 @@
+Ural 1141
+这题n小,很容易在O(n^(0.5))找到p,q.
+之后解ed≡1(mod (p-1)(q-1)),在O(logn)时间里用Extended_Euclid_GCD,
+最后算c^d,用倍增思想 O(logd)
+这样就不time out了.
+
+
+
+我的理解:
+RSA是一种public key encryption
+对于每个用户有一个public key,它是公开于public key book.
+其他用户用某一用户的public key,来encrypt message给这一用户.
+对于收到message的用户,要用他的private key,来decrypted message.
+
+encrypt,decrypted 本来是一对互逆的过程.
+要构造一组单向(one way)的过程,才保证安全性.
+
+令e=public key,d=private key
+encrypt :  E(x)=x^e mod n
+decrypted :D(x)=x^d mod n
+
+找两个不同的100位质数p,q. 令n=pq, f=(p-1)(q-1)
+
+n是公开的,由于p,q很大,很难在有限时间快速分解n,所以称RSA是单向的.
+
+public key,private key 满足
+ed≡1(mod f)  , gcd(e,f)=gcd(d,f)=1
+给定e,由于很难知道p,q,即很难知道f。所以d很难求出.达到加密的目的.
+
+
+--------------------------------------------------
+
+
+
+[ Crypto Home || Computer Science || Trinity College ]  
+
+URL: http://starbase.trincoll.edu/~crypto/historical/rsa.html
+Last updated: 07/15/2002 08:44:29
+RSA
+Authors: Brain Hart '99 and Chris Savarese
+RSA
+RSA is a form of public key encryption. Its initialis stand for the three men who invented it in 1977 at MIT: Ron Rivest, Adi Shamir, and Len Adleman. In public key encryption, a key is divided into two halves, a public and private half. The public key can be distributed widely. It is used to encrypt messages which can then only be decrypted using the private key. 
+
+The keys are constructed by using very large prime numbers. The security behind RSA lies in the difficulty of factoring large numbers into their primes. The process involves selecting two large (hundreds of digits) prime numbers (p and q), and multiplying them together to get the product, n. These numbers are passed through a mathematical algorithm to determine the public key KU = {e,n} and the private key KR = {d,n}, which are mathematically related (the necessary equations are given at the bottom of the page). It is extremely difficult to determine e and/or d given n, thus the security of the algorithm. Once the keys have been created a message can be encrypted in blocks, and passed though the following equation: 
+
+
+(1)   C = Me mod n
+
+Where C is the ciphertext, M is the plaintext, and e is the recipient's public key. Similarly, the above message could be decrypted by the following equation: 
+
+
+
+(2)   M = Cd mod n
+
+Where d is the recipient's private key. 
+
+For example: let's assume that our M is 19 (we will use smaller numbers for simplicity, normally theses numbers would be MUCH larger). We will use 7 as p and 17 as q. Thus, n = 7 * 17 = 119. Our e is then calculated to be 5 and d is calculated to be 77. Thus our KU is {5, 119} and our KR is {77, 119}. We can then pass the needed values through equation (1) to compute C. In this case C is 66. We could then decrypt C (66) to get back our original plain text. We pass the needed values through equation (2) and get 19, our original plaintext! Try it yourself with other numbers. 
+
+
+--------------------------------------------------------------------------------
+Note: To determine e and d, perform the following: 
+
+Calculate f(n) = (p - 1)(q - 1) 
+Choose e to be relatively prime to f(n) and less than f(n). 
+Determine d such that de = 1 mod f(n) and d < f(n).
+
+For Further Study and Enjoyment
+
+Information for this page was obtained from Network and Internetwork Security: Principles and Practice by William Stallings. Prentice Hall, 1995. 
+
+[ Crypto Home || Historical Ciphers || Computer Science || Trinity College ]  
+
+Email contact: ralph.morelli@trincoll.edu
+

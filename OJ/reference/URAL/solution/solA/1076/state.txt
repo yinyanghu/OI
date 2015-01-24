@@ -1,0 +1,11 @@
+ex.dpr - hungary
+798999	09:57:17 27 技忘把 2005	flower		1076	Pascal	Accepted	0.015	292 K
+kuhn-munkres
+http://www.math.uwo.ca/~mdawes/courses/344/kuhn-munkres.html
+
+ex2.dpr - flow
+797913	22:11:25 25 技忘把 2005	Amber Seed	1076	Pascal	Accepted	0.984	836 K
+797911	22:10:37 25 技忘把 2005	flower		1076	Pascal	Accepted	1	836 K
+
+ex3.dpr - flow by spfa
+1000286	18:36:15 17 Nov 2005	flower	1076	Pascal	Accepted	0.64	845 KB

@@ -1,0 +1,11 @@
+All the shortest ways:
+To  1:                                    MWSV          dist=0
+To  2:               MWSV-->WV-->MWV-->W-->MWS          dist=4
+To  3:                         MWSV-->WV-->MWV          dist=2
+To  4:               MWSV-->WV-->MWV-->V-->MSV          dist=4
+To  5:      MWSV-->WV-->MWV-->W-->MWS-->S-->MS          dist=6
+To  6:                               MWSV-->WV          dist=1
+To  7:                     MWSV-->WV-->MWV-->W          dist=3
+To  8:           MWSV-->WV-->MWV-->W-->MWS-->S          dist=5
+To  9:                     MWSV-->WV-->MWV-->V          dist=3
+To 10:MWSV-->WV-->MWV-->W-->MWS-->S-->MS-->(\)          dist=7

@@ -1,0 +1,8 @@
+the algorithm in "ex.dpr" and algorithm "ex2.dpr" is identic ,i.e. time complexities are both O(N).
+The memory complexity of "ex.dpr" is O(N), but that of "ex2.dpr" is O(1).
+D[i] in "ex.dpr" is the i-th char in text.
+GetChar(i) for a Buffer in "ex2.dpr" is instead of D[i]. D[i] is equals to GetChar(i).
+For each operation, only use D[i] and D[i+1], so Buffer has two chars.
+
+
+

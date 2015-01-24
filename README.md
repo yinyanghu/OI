@@ -7,26 +7,34 @@ Online Judge
 ---
 
 * PKU: [PKU JudgeOnline](http://poj.org/)
-    - username: `lijian2007`
+    - username: `lijian2007`, `oifox`
 
 * LOJ: Rujia Liu's Online Judge - *not available*
 
 * SGU: [Saratov State University :: Online Contester](http://acm.sgu.ru/)
+    - userID: `014212`
 
-* SPOJ
+* SPOJ: [Sphere Online Judge](http://www.spoj.com/)
+    - username: `lijian`
 
-* UVA
+* UVA: [UVa Online Judge](http://uva.onlinejudge.org/)
     - userID: `149150G`
 
-* VIJOS
+* VIJOS: [](https://vijos.org/)
+    - username: `lijian`
 
-* ZJU
+* ZJU: [Zhejiang University Online Judge](http://acm.zju.edu.cn/onlinejudge/)
+    - username
 
 * USACO: [USA Computing Olympiad](http://cerberus.delosent.com:791/usacogate)
-    - username: `lijian-1`
-    - password: `oifox`
+    - username: `lijian-1`, `oifox20071`
+    - password: `oifox`, 
 
+* Solutions, Testcases, Reports
+    - SGU
+    - SPOJ
+    - URAL
+    - PKU
 
 ---
-
-OIFox
+☯  OIFox, 2005 - 2009

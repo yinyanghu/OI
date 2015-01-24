@@ -1,0 +1,48 @@
+
+
+int		cx 	[limitSize];
+int		cy	[limitSize];
+
+cx[i] 表示 X集合中的编号为i的节点 所匹配的节点，它在Y中的编号
+
+
+
+
+memset( cx , 0 , sizeof(cx) );
+memset( cy , 0 , sizeof(cy) );
+
+
+bool		mark	[limitSize];
+
+
+int		totMatch = 0;
+
+for (int i = 1; i <= n; i ++)
+{
+	memset(mark , 0 , sizeof(mark));
+
+	if (extendPath( i ))
+		totMatch ++;
+}
+
+bool	extendPath( int u  )
+{
+	for (int v = 1; v <= m; v ++)
+	{
+		if ( (u->v)有边存在 && ! mark[v] )
+		{
+			mark[v] = TRUE;
+			if (cy[v] == 0 || extendPath( cy[v] ))
+			{
+				cx[u] = v; cy[v] = u; return TRUE;
+			}
+		}
+	}
+	return	FALSE;
+}
+
+
+
+
+
+

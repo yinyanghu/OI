@@ -1,0 +1,9 @@
+Note on SUMITR, which was written on 6117 -- Jan 24, 2005:
+
+I got AC at last, with exactly 256 bytes.
+Now the prog is hard legible. If you don't know how to solve the prob --
+  to find the max sum, I mean, not to compress your prog to 256 bytes --
+  don't try to read it. It will just confuse you more :)
+
+Note later: Read sumtrian.pas, which is the same prob but without length
+  restriction.

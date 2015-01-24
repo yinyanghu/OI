@@ -1,0 +1,19 @@
+You just need build a trie, yes a trie, this will do. You can make a slower implementation(O((n+m)logn)), in order to save a lot of memories with a quite feasible coding. Following are how I code it:
+1. Sort all obscene words within O(nlogn) time.
+2. Build the trie in reverse order(this make all the sons of one nodes in alphabet order).
+3. Make a BFS of the trie, this can let the son list of one node together, and get all nodes in the order of their depth.
+4. Make suffix links in BFS order(i.e.: depth order).
+5. Process the text.
+
+Note that this algo is to make the son list of one node together and in alphabet order, which we can utilize to process the Binary Search to search wether one edge exist in O(logn) time. 
+
+--------------------------------------------------------------------------------
+
+Ural 1269 Obscene words filter (1KB)  - doremi  57 Read(s), 2:44 pm Dec 22, 2003 
+i tried to solve it with tree structure, but exceeded the memory limit.   - doremi  28 Read(s), 2:46 pm Dec 22, 2003 
+anyone who can help me?   - doremi  24 Read(s), 2:46 pm Dec 22, 2003 
+I think you can use Aho-Corasick algorithm (-)   - Yura Znovyak  37 Read(s), 3:13 am Dec 23, 2003 
+What's Aho-Corasick algorithm?   - doremi  25 Read(s), 5:54 pm Dec 24, 2003 
+Suffix Trees or Arrays may help   - Cosmin  27 Read(s), 10:43 am Dec 23, 2003 
+Here is my algo: (730 Bytes)  - alessenda  75 Read(s), 8:54 pm Dec 24, 2003 
+How did you make it without MLE?   - doremi  11 Read(s), 4:08 pm Dec 29, 2003 

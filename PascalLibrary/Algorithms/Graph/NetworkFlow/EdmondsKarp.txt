@@ -1,0 +1,59 @@
+int	n , S , T;	//Nodes : 0~n-1
+int	Cap	[limitSize][limitSize];
+int	Flow	[limitSize][limitSize];
+
+int		curtFlow;
+
+int		queue	[limitSize];
+int		head , tail;
+bool		mark	[limitSize];
+int		prev	[limitSize];
+
+bool	extendPath()
+{
+	memset(mark , 0 , sizeof(mark));
+	queue[ head = tail = 0] = S;
+	mark[ S ] = True;
+
+	while (head <= tail)
+	{
+		int u = queue[head ++];
+		for (int v = 0; v < n; v ++)
+			if (Flow[u][v] < Cap[u][v] && !mark[v])
+			{
+				mark[v] = True;
+				queue[ ++ tail ] = v;
+				prev[v] = u;
+			}
+		if (mark[T]) break;
+	}
+
+	if (! mark[T]) return 0;
+	int	alpha = INFINITY;
+	
+	int	u , v;
+	v = T;
+	while (v != S)
+	{
+		u = prev[v];
+		alpha = min(alpha , Cap[u][v] - Flow[u][v]);
+		v = u;
+	}
+	v = T;
+	while (v != S)
+	{
+		u = prev[v];
+		Flow[u][v] += alpha;
+		Flow[v][u] -= alpha;
+		v = u;
+	}
+}
+
+void	maxFlow()
+{
+	curtFlow = 0;
+	memset(Flow , 0 , sizeof(Flow));
+	while ( extendPath() ){}
+
+	printf("MaxFlow = %d\n" , curtFlow);
+}
