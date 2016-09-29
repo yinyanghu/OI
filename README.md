@@ -28,7 +28,6 @@ Online Judge
 
 * USACO: [USA Computing Olympiad](http://cerberus.delosent.com:791/usacogate)
     - username: `lijian-1`, `oifox20071`
-    - password: `oifox`, 
 
 * Solutions, Testcases, Reports
     - SGU
