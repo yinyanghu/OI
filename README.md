@@ -18,7 +18,7 @@ Online Judge
     - username: `lijian`
 
 * UVA: [UVa Online Judge](http://uva.onlinejudge.org/)
-    - userID: `yinyanghu`(unknown what's this: `149150G`)
+    - userID: `yinyanghu`(old ACM-ICPC archive: `14915OG`)
 
 * VIJOS: [](https://vijos.org/)
     - username: `lijian`
